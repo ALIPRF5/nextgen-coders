@@ -277,10 +277,12 @@ await resizePhoto(src('bmce', 'WhatsApp Image 2026-11-11 at 7.10.46 PM (1).jpeg'
 
 // Board portraits — bust crops used in the numbered gold cards on /board.
 await fs.mkdir(path.join(OUT, 'board'), { recursive: true })
-for (const [file, name, left, top] of [
+for (const [file, name, left, top, width = 660, height = 860] of [
   ['ali elamrani.jpg', 'ali-el-amrani.webp', 613, 210],
   ['issam.jpg', 'issam-brahmi.webp', 70, 90],
-  ['anas.jpg', 'anas-errafiq.webp', 800, 110],
+  // Anas: studio cut-out on black. A tighter source box keeps the head from
+  // drowning in the background, then it is scaled to the same 660x860 card crop.
+  ['anas.jpg', 'anas-errafiq.webp', 630, 298, 600, 782],
   ['chaima.jpg', 'chaima-labsiri.webp', 1020, 150],
   ['nezha.jpg', 'nezha-azizi.webp', 980, 100],
   ['adnan.jpg', 'adnan-el-idrissi.webp', 120, 12],
@@ -288,8 +290,8 @@ for (const [file, name, left, top] of [
   await cropResize(src('board', file), out(`board/${name}`), {
     left,
     top,
-    width: 660,
-    height: 860,
+    width,
+    height,
     resizeWidth: 660,
     quality: 84,
   })
