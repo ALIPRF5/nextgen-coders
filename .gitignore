@@ -1,21 +1,30 @@
-node_modules
-dist
-data
+# Build output and dependencies.
+/node_modules/
+/dist/
+
+# Local SQLite fallback database (server/join-store.js).
+# Keep the leading slash: a bare "data" also matches src/data/, which would
+# silently drop the site's content files from the repo.
+/data/
+
+# Secrets.
 .env
 .env.local
 .env.*.local
-test-results
-playwright-report
-screenshots
-screens-review
-.vercel
+
+# Test and tooling output.
+/test-results/
+/playwright-report/
+/screenshots/
+/screens-review/
+/.vercel/
 .DS_Store
 *.log
 
 # Original full-size assets — public/images holds the optimised WebP copies.
-BOARD PHOTOS/
-LOGO OF THE CLUB/
-PHOTOS OF */
+/BOARD PHOTOS/
+/LOGO OF THE CLUB/
+/PHOTOS OF */
 
 # Local tool config that may contain API keys.
 deepseek-api.json
