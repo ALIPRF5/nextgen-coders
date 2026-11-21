@@ -145,14 +145,16 @@ Le dépôt est sur GitHub : <https://github.com/ALIPRF5/nextgen-coders>.
 `.env` et `data/` sont ignorés par Git, donc aucun secret n'est poussé.
 
 1. Sur Vercel : **Add New → Project**, importe `ALIPRF5/nextgen-coders`.
-2. Nom du projet : `nextgen-coders` (donne l'URL `nextgen-coders.vercel.app`,
-   celle prévue dans `VITE_SITE_URL` et le sitemap).
+2. Nom du projet : `nextgen-coders-rho` (l'URL obtenue est
+   <https://nextgen-coders-rho.vercel.app>, celle utilisée dans
+   `VITE_SITE_URL`, le sitemap et les balises canonical). Attention :
+   `nextgen-coders.vercel.app` appartient à un autre site, ne pas l'utiliser.
 3. Preset **Vite**, Root `./`, Build `npm run build`, Output `dist`.
 4. Ajoute ces variables pour **Production, Preview et Development** :
    - `VITE_SUPABASE_URL` = `https://gjkubpotihnrkjyoeupw.supabase.co`
    - `VITE_SUPABASE_ANON_KEY` = la clé « publishable » (Supabase → Project
      Settings → API Keys ; la même valeur que dans ton `.env` local)
-   - `VITE_SITE_URL` = `https://nextgen-coders.vercel.app`
+   - `VITE_SITE_URL` = `https://nextgen-coders-rho.vercel.app`
 5. Déploie. Ensuite chaque `git push` sur `main` redéploie tout seul
    (Vercel Git integration) ; les autres branches donnent des URLs de preview.
 6. Ouvre l'URL sur téléphone et ordinateur, puis envoie une vraie demande

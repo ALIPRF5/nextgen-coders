@@ -43,7 +43,7 @@ Le script active **Row Level Security** :
 ```env
 VITE_SUPABASE_URL=https://xxxx.supabase.co
 VITE_SUPABASE_ANON_KEY=eyJ...
-VITE_SITE_URL=https://nextgen-coders.vercel.app
+VITE_SITE_URL=https://nextgen-coders-rho.vercel.app
 ```
 
 3. Relance `npm run dev`. Sur la page **Rejoindre**, le bandeau « base de
