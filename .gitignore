@@ -1,0 +1,21 @@
+node_modules
+dist
+data
+.env
+.env.local
+.env.*.local
+test-results
+playwright-report
+screenshots
+screens-review
+.vercel
+.DS_Store
+*.log
+
+# Original full-size assets — public/images holds the optimised WebP copies.
+BOARD PHOTOS/
+LOGO OF THE CLUB/
+PHOTOS OF */
+
+# Local tool config that may contain API keys.
+deepseek-api.json

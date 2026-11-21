@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NEXTGEN CODERS — OG image</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; }
+      html, body { width: 1200px; height: 630px; overflow: hidden; }
+      body {
+        background: #0a0a0a;
+        color: #fff;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        position: relative;
+      }
+      .photo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 48%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 38%;
+        opacity: 0.92;
+      }
+      .fade {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, #0a0a0a 36%, rgba(10, 10, 10, 0.94) 50%, rgba(10, 10, 10, 0.45) 76%, rgba(10, 10, 10, 0.2) 100%),
+          linear-gradient(0deg, rgba(10, 10, 10, 0.85), transparent 45%);
+      }
+      .grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 72px 72px;
+        mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+      }
+      .glow {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(52% 70% at 88% 0%, rgba(254, 169, 1, 0.22), transparent 68%);
+      }
+      .frame {
+        position: relative;
+        height: calc(100% - 40px);
+        margin: 20px;
+        padding: 56px 68px 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid rgba(254, 169, 1, 0.18);
+        border-radius: 18px;
+      }
+      .brand { display: flex; align-items: center; gap: 14px; }
+      .brand img { width: 58px; height: 58px; object-fit: contain; }
+      .brand span {
+        font-size: 23px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+      .brand em { font-style: normal; color: #fea901; }
+      .kicker {
+        font-family: Consolas, monospace;
+        font-size: 13px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #a3a3a3;
+      }
+      h1 {
+        margin-top: 16px;
+        font-size: 64px;
+        line-height: 0.98;
+        letter-spacing: -0.035em;
+        font-weight: 700;
+        max-width: 640px;
+      }
+      h1 span { color: #fea901; }
+      .bottom {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 24px;
+        border-top: 1px solid #262626;
+        padding-top: 22px;
+      }
+      .tagline {
+        font-size: 21px;
+        font-weight: 600;
+        color: #fff;
+      }
+      .tagline small {
+        display: block;
+        margin-top: 8px;
+        font-family: Consolas, monospace;
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #a3a3a3;
+      }
+      .url {
+        font-family: Consolas, monospace;
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #fea901;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="photo" src="../public/images/hero-club.webp" alt="" />
+    <div class="fade"></div>
+    <div class="grid"></div>
+    <div class="glow"></div>
+    <div class="frame">
+      <div>
+        <div class="brand">
+          <img src="../public/images/logo-mark.png" alt="" />
+          <span>Nextgen <em>Coders</em></span>
+        </div>
+
+        <p class="kicker" style="margin-top: 50px">Club de programmation · EST Laâyoune</p>
+        <h1>On construit<br /><span>de vraies choses.</span></h1>
+      </div>
+
+      <div class="bottom">
+        <p class="tagline">
+          Code smarter, not harder.
+          <small>Cinq parcours · ateliers · hackathons</small>
+        </p>
+        <p class="url">EST Laâyoune · Maroc</p>
+      </div>
+    </div>
+  </body>
+</html>

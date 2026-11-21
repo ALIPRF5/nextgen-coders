@@ -1,0 +1,16 @@
+# Never upload local secrets, the local database, or build/test artefacts.
+.env
+.env.*
+data
+node_modules
+dist
+test-results
+playwright-report
+screenshots
+screens-review
+*.log
+
+# Original full-size assets: only the optimised copies in public/ are needed.
+BOARD PHOTOS
+LOGO OF THE CLUB
+PHOTOS OF *
