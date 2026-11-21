@@ -1,16 +1,22 @@
-# Never upload local secrets, the local database, or build/test artefacts.
-.env
-.env.*
-data
-node_modules
-dist
-test-results
-playwright-report
-screenshots
-screens-review
+# Applied by Vercel on top of the git clone, with .gitignore semantics.
+# Every directory pattern is anchored to the repository root: a bare "data"
+# would also match src/data/ and strip the site's content files from the build.
+
+# Never upload local secrets or the local SQLite fallback database.
+/.env
+/.env.*
+/data
+
+# Build and test artefacts.
+/node_modules
+/dist
+/test-results
+/playwright-report
+/screenshots
+/screens-review
 *.log
 
 # Original full-size assets: only the optimised copies in public/ are needed.
-BOARD PHOTOS
-LOGO OF THE CLUB
-PHOTOS OF *
+/BOARD PHOTOS
+/LOGO OF THE CLUB
+/PHOTOS OF *
