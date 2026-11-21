@@ -141,15 +141,25 @@ alternatifs FR / EN sont dans `src/data/events.js`, `src/data/gallery.js` et
 
 ## Déploiement (Vercel, gratuit)
 
-1. Pousse le dépôt sur GitHub (privé accepté). `.env` est ignoré par Git.
-2. Sur Vercel : **Add New → Project**, importe le dépôt, preset **Vite**.
-3. Ajoute `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, `VITE_SITE_URL`
-   dans **Settings → Environment Variables**.
-4. Déploie, ouvre l'URL sur téléphone et ordinateur, puis envoie une vraie
-   demande d'adhésion pour vérifier la ligne dans Supabase.
-5. Le fichier `vercel.json` ajoute le rewrite SPA (toutes les routes vers
+Le dépôt est sur GitHub : <https://github.com/ALIPRF5/nextgen-coders>.
+`.env` et `data/` sont ignorés par Git, donc aucun secret n'est poussé.
+
+1. Sur Vercel : **Add New → Project**, importe `ALIPRF5/nextgen-coders`.
+2. Nom du projet : `nextgen-coders` (donne l'URL `nextgen-coders.vercel.app`,
+   celle prévue dans `VITE_SITE_URL` et le sitemap).
+3. Preset **Vite**, Root `./`, Build `npm run build`, Output `dist`.
+4. Ajoute ces variables pour **Production, Preview et Development** :
+   - `VITE_SUPABASE_URL` = `https://gjkubpotihnrkjyoeupw.supabase.co`
+   - `VITE_SUPABASE_ANON_KEY` = la clé « publishable » (Supabase → Project
+     Settings → API Keys ; la même valeur que dans ton `.env` local)
+   - `VITE_SITE_URL` = `https://nextgen-coders.vercel.app`
+5. Déploie. Ensuite chaque `git push` sur `main` redéploie tout seul
+   (Vercel Git integration) ; les autres branches donnent des URLs de preview.
+6. Ouvre l'URL sur téléphone et ordinateur, puis envoie une vraie demande
+   d'adhésion pour vérifier la ligne dans Supabase.
+7. Le fichier `vercel.json` ajoute le rewrite SPA (toutes les routes vers
    `index.html`) pour que `/about` fonctionne aussi après un rafraîchissement.
-6. Si tu changes de domaine, mets à jour `VITE_SITE_URL`, `public/sitemap.xml`,
+8. Si tu changes de domaine, mets à jour `VITE_SITE_URL`, `public/sitemap.xml`,
    `public/robots.txt` et les URLs dans `index.html` (OG / canonical).
    L'image OG se régénère avec `npm run og`.
 
