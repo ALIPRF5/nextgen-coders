@@ -128,6 +128,33 @@ export default {
     ctaText: "Pas besoin d'être expert. Il faut juste avoir envie de faire.",
   },
 
+  announcement: {
+    eyebrow: 'Annonce officielle',
+    badge: 'Autumn School',
+    title: 'IA frugale et souveraine',
+    titleLead: 'pour des territoires sahariens intelligents, durables et résilients',
+    dateLabel: '4–5 décembre 2026',
+    dateNote: 'vendredi et samedi',
+    location: 'Es-Smara, Maroc',
+    intro:
+      "Deux jours pour apprendre, construire et concourir autour d'une IA qui colle à nos territoires — frugale, souveraine et pensée pour un impact réel.",
+    programmeLabel: 'Au programme',
+    programme: [
+      { emoji: '🎤', title: 'Keynotes' },
+      { emoji: '💻', title: 'Ateliers pratiques' },
+      { emoji: '💬', title: 'Tables rondes' },
+      { emoji: '🏆', title: 'Hackathon' },
+    ],
+    partnersLabel: 'Partenaires',
+    partnersText:
+      "Organisé avec l'EST Laâyoune, aux côtés de l'UM6P, l'UIZ, l'Université Abdelmalek Essaâdi, l'Université Hassan 1er, LIDSI, LIAS et RITM.",
+    soonLabel: "Les détails d'inscription arrivent bientôt",
+    soonText: "Restez à l'écoute.",
+    posterAlt:
+      "Affiche officielle de l'Autumn School à Es-Smara, les 4 et 5 décembre 2026 : IA frugale et souveraine pour des territoires sahariens intelligents, durables et résilients.",
+    posterCaption: 'Autumn School · 4–5 décembre 2026',
+  },
+
   about: {
     eyebrow: 'À propos',
     meta: 'Depuis janvier 2026 · EST Laâyoune',

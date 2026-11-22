@@ -128,6 +128,33 @@ export default {
     ctaText: "You don't need to be an expert. You just need to want to make things.",
   },
 
+  announcement: {
+    eyebrow: 'Official announcement',
+    badge: 'Autumn School',
+    title: 'Frugal & Sovereign Artificial Intelligence',
+    titleLead: 'for Smart, Sustainable and Resilient Saharan Territories',
+    dateLabel: '4–5 December 2026',
+    dateNote: 'Friday & Saturday',
+    location: 'Es-Smara, Morocco',
+    intro:
+      'Two days to learn, build and compete around AI that fits our territories — frugal, sovereign and made for real impact.',
+    programmeLabel: "What's on the programme",
+    programme: [
+      { emoji: '🎤', title: 'Keynote talks' },
+      { emoji: '💻', title: 'Hands-on workshops' },
+      { emoji: '💬', title: 'Panel discussions' },
+      { emoji: '🏆', title: 'Hackathon' },
+    ],
+    partnersLabel: 'Partners',
+    partnersText:
+      'Organised with EST Laâyoune, alongside UM6P, UIZ, Université Abdelmalek Essaâdi, Université Hassan 1er, LIDSI, LIAS and RITM.',
+    soonLabel: 'Registration details coming soon',
+    soonText: 'Stay tuned.',
+    posterAlt:
+      'Official poster for the Autumn School in Es-Smara, 4–5 December 2026: frugal and sovereign artificial intelligence for smart, sustainable and resilient Saharan territories.',
+    posterCaption: 'Autumn School · 4–5 December 2026',
+  },
+
   about: {
     eyebrow: 'About',
     meta: 'Since January 2026 · EST Laayoune',

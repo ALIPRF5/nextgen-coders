@@ -14,6 +14,7 @@
     "test": "playwright test",
     "test:ui": "playwright test --ui",
     "images": "node scripts/optimize-images.mjs",
+    "poster": "node scripts/build-poster.mjs",
     "og": "node scripts/og-image.mjs",
     "join:list": "node scripts/join-admin.mjs list",
     "join:export": "node scripts/join-admin.mjs export"

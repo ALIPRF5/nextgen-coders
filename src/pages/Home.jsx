@@ -4,7 +4,13 @@ import HeroSlideshow from '../components/HeroSlideshow'
 import Seo from '../components/Seo'
 import TrackCard from '../components/TrackCard'
 import Wave from '../components/Wave'
-import { ArrowRight, InstagramIcon, SparkleIcon, SquiggleIcon } from '../components/icons'
+import {
+  ArrowRight,
+  InstagramIcon,
+  MapPinIcon,
+  SparkleIcon,
+  SquiggleIcon,
+} from '../components/icons'
 import { heroSlides } from '../data/hero'
 import { SITE } from '../data/site'
 import { tracks } from '../data/tracks'
@@ -84,6 +90,107 @@ export default function Home() {
             ))}
           </div>
           <p className="meta mt-4 pb-10">{t.home.statsLabel}</p>
+        </div>
+      </section>
+
+      <section id="announcement" className="paper overflow-x-clip border-b-2 border-fg/10">
+        <div className="shell py-14 sm:py-20">
+          <div className="relative overflow-hidden rounded-card border-2 border-fg/15 bg-surface shadow-[0_18px_0_-10px_rgba(23,23,29,0.12)]">
+            <SparkleIcon
+              className="pointer-events-none absolute -right-8 -top-10 h-40 w-40 text-accent/20"
+              aria-hidden="true"
+            />
+            <div className="relative grid gap-8 p-5 sm:p-8 lg:grid-cols-[0.78fr_1.22fr] lg:gap-12 lg:p-10">
+              <figure
+                data-reveal
+                className="photo-frame relative mx-auto w-full max-w-[360px] -rotate-[1.5deg] self-start transition-transform duration-300 hover:rotate-0 lg:self-center"
+              >
+                <img
+                  src="/images/announcement-autumn-school.webp"
+                  alt={t.announcement.posterAlt}
+                  width="760"
+                  height="1051"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full rounded-[4px]"
+                />
+                <figcaption className="px-1 pb-1 pt-3 text-[10.5px] font-extrabold uppercase tracking-[0.12em] text-night">
+                  {t.announcement.posterCaption}
+                </figcaption>
+                <span className="sticker absolute -right-2 -top-4 rotate-6 bg-sun px-3 py-1.5 text-[9.5px] font-extrabold uppercase tracking-[0.1em] sm:-right-5">
+                  {t.announcement.dateLabel}
+                </span>
+              </figure>
+
+              <div data-reveal className="flex flex-col">
+                <p className="eyebrow">
+                  <span className="h-2.5 w-2.5 rounded-full bg-accent" aria-hidden="true" />
+                  {t.announcement.eyebrow}
+                </p>
+
+                <h2 className="display mt-4 text-[clamp(2.8rem,7vw,5rem)] leading-[0.88]">
+                  {t.announcement.badge}
+                </h2>
+                <p className="display mt-4 max-w-xl text-[clamp(1.35rem,2.6vw,2rem)] leading-[1.08]">
+                  {t.announcement.title}{' '}
+                  <span className="text-muted">{t.announcement.titleLead}</span>
+                </p>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  <span className="pill border-fg/15 bg-raised text-fg">
+                    {t.announcement.dateLabel} · {t.announcement.dateNote}
+                  </span>
+                  <span className="pill border-fg/15 bg-raised text-fg">
+                    <MapPinIcon className="h-3.5 w-3.5 text-accent-text" aria-hidden="true" />
+                    {t.announcement.location}
+                  </span>
+                </div>
+
+                <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-muted">
+                  {t.announcement.intro}
+                </p>
+
+                <p className="meta mt-7">{t.announcement.programmeLabel}</p>
+                <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                  {t.announcement.programme.map((item) => (
+                    <li
+                      key={item.title}
+                      className="flex items-center gap-3 rounded-control border-2 border-fg/10 bg-raised px-4 py-3"
+                    >
+                      <span className="text-lg leading-none" aria-hidden="true">
+                        {item.emoji}
+                      </span>
+                      <span className="text-[13.5px] font-bold">{item.title}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-6 border-t-2 border-fg/10 pt-5">
+                  <p className="meta">{t.announcement.partnersLabel}</p>
+                  <p className="mt-2 max-w-xl text-[13px] leading-relaxed text-muted">
+                    {t.announcement.partnersText}
+                  </p>
+                </div>
+
+                <div className="mt-auto flex flex-wrap items-center gap-x-4 gap-y-3 pt-7">
+                  <p className="inline-flex items-center gap-2 rounded-full border-2 border-fg bg-accent px-4 py-2 text-[10.5px] font-extrabold uppercase tracking-[0.1em] text-night">
+                    <SparkleIcon className="h-3.5 w-3.5" aria-hidden="true" />
+                    {t.announcement.soonLabel}
+                  </p>
+                  <p className="text-[12.5px] font-bold text-muted">{t.announcement.soonText}</p>
+                  <a
+                    href={SITE.instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-auto inline-flex items-center gap-2 text-[12px] font-extrabold uppercase tracking-[0.12em] text-fg hover:text-accent-text"
+                  >
+                    <InstagramIcon className="h-4 w-4" />
+                    {SITE.instagramHandle}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
