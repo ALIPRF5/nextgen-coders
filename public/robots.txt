@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nextgen-coders-rho.vercel.app/sitemap.xml
+Sitemap: https://nextgen-coders-fz2v.vercel.app/sitemap.xml

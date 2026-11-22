@@ -7,7 +7,7 @@ export const SITE = {
   instagramUrl: 'https://www.instagram.com/nextgen_coders_estl/',
   instagramHandle: '@nextgen_coders_estl',
   email: 'nextgencoders.est@gmail.com',
-  siteUrl: import.meta.env.VITE_SITE_URL || 'https://nextgen-coders-rho.vercel.app',
+  siteUrl: import.meta.env.VITE_SITE_URL || 'https://nextgen-coders-fz2v.vercel.app',
 }
 
 export { LEVELS }
