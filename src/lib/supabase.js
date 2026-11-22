@@ -1,6 +1,19 @@
 // Only the public anon key is used here. The service_role key never leaves Supabase.
-const url = import.meta.env.VITE_SUPABASE_URL
-const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+// The publishable key is safe to ship in the browser: Row Level Security on
+// join_requests allows anonymous inserts (nothing else), so it cannot be used to
+// read or change other people's data.
+//
+// Vercel has repeatedly rebuilt this project without the VITE_* variables, which
+// silently disconnected the form. These production-only fallbacks keep the site
+// connected even when the project has no environment variables set. Locally,
+// `npm run dev` still falls back to the SQLite database when no .env is present.
+const FALLBACK_URL = import.meta.env.PROD ? 'https://gjkubpotihnrkjyoeupw.supabase.co' : ''
+const FALLBACK_ANON_KEY = import.meta.env.PROD
+  ? 'sb_publishable_xpvRQgmE44pB9-XvlXm7qQ_kRV98chU'
+  : ''
+
+const url = import.meta.env.VITE_SUPABASE_URL || FALLBACK_URL
+const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || FALLBACK_ANON_KEY
 
 export const isSupabaseConfigured = Boolean(url && anonKey)
 
