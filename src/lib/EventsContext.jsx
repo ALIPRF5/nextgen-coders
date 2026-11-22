@@ -11,11 +11,22 @@ function pickText(fr, en, fallback = '') {
   return { fr: fr || fallback, en: en || fr || fallback }
 }
 
+// Supabase uses UUID ids, while the bundled photos are keyed by the local
+// slugs. Match on the id first, then on the event's date and title, so the
+// photos survive regardless of which id format the database returns.
+function findLocalEvent(row) {
+  return (
+    fallbackEvents.find((event) => event.id === row.id) ??
+    fallbackEvents.find((event) => event.date.en === row.date_label_en) ??
+    fallbackEvents.find((event) => event.title.en === row.title_en)
+  )
+}
+
 // Supabase rows use bilingual columns; convert them to the same shape as src/data/events.js.
 function mapRow(row) {
   const facts = Array.isArray(row.facts) ? row.facts : []
   // Keep the local photography even when the text comes from Supabase.
-  const local = fallbackEvents.find((event) => event.id === row.id)
+  const local = findLocalEvent(row)
 
   return {
     id: row.id,
