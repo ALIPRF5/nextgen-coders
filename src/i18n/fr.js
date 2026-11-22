@@ -268,10 +268,6 @@ export default {
     upcoming: 'À venir',
     past: 'Passé',
     next: 'Prochain événement',
-    comingSoon: 'Coming soon',
-    comingSoonText:
-      "Le prochain événement du club se prépare. La date, le lieu et le programme seront annoncés ici et sur Instagram.",
-    metaUpcoming: 'prochain à venir',
     upcomingTitle: 'À venir',
     pastTitle: 'Déjà passés',
     note: "Les événements passés restent ici : c'est notre mémoire.",
