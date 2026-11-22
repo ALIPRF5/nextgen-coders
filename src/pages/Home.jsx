@@ -320,10 +320,27 @@ export default function Home() {
               {t.home.nextEyebrow}
             </p>
             <h2 className="display mt-6 text-[clamp(3.4rem,11vw,9rem)] leading-[0.82] text-accent">
-              {t.home.nextTitle}
+              {t.announcement.badge}
             </h2>
-            <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-white/70 sm:text-base">
-              {t.events.comingSoonText}
+            <p className="display mt-4 max-w-2xl text-[clamp(1.4rem,2.8vw,2.1rem)] leading-[1.1] text-white">
+              {t.announcement.title}{' '}
+              <span className="text-white/60">{t.announcement.titleLead}</span>
+            </p>
+            <p className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-[11px] font-extrabold uppercase tracking-[0.14em] text-accent">
+              <span>
+                {t.announcement.dateLabel} · {t.announcement.dateNote}
+              </span>
+              <span className="hidden h-1 w-1 rounded-full bg-accent/60 sm:block" aria-hidden="true" />
+              <span className="inline-flex items-center gap-1.5">
+                <MapPinIcon className="h-3.5 w-3.5" aria-hidden="true" />
+                {t.announcement.location}
+              </span>
+            </p>
+            <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-white/70 sm:text-base">
+              {t.announcement.intro}
+            </p>
+            <p className="mt-4 text-[11px] font-extrabold uppercase tracking-[0.14em] text-white/45">
+              {t.announcement.soonLabel}
             </p>
           </div>
           <div data-reveal className="flex flex-wrap gap-3 lg:justify-end">

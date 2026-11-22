@@ -18,7 +18,7 @@ export default {
     events: {
       title: 'Events & hackathons — NEXTGEN CODERS',
       description:
-        'NEXTGEN CODERS events: the 2026 health-tech hackathon, n8n workshop, Best Website Competition, Computer Day and the next hackathon.',
+        'NEXTGEN CODERS events: the 2026 health-tech hackathon, n8n workshop, Best Website Competition, Computer Day and the Autumn School in Es-Smara on 4–5 December 2026.',
     },
     gallery: {
       title: 'Gallery — NEXTGEN CODERS',
@@ -113,7 +113,6 @@ export default {
       'Web, AI, cybersecurity, systems or design: pick a way in, then explore.',
     mottoLabel: 'The club motto',
     nextEyebrow: 'Next event',
-    nextTitle: 'Coming soon',
     nextCta: 'See the events',
     aboutEyebrow: 'The club',
     aboutTitle: 'Born in January 2026. Already shipping.',
